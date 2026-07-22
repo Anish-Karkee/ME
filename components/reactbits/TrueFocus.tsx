@@ -20,7 +20,7 @@ interface FocusRect {
 }
 
 const TrueFocus: React.FC<TrueFocusProps> = ({
-  sentence = 'True Focus',
+  sentence = 'Anish Pokharel',
   separator = ' ',
   manualMode = false,
   blurAmount = 5,

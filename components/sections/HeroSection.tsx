@@ -8,7 +8,7 @@ import { PERSONAL_INFO } from "@/constants/portfolioData";
 import { FileDown, Send, MapPin, ChevronDown, Sparkles } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { MagneticButton } from "@/components/reactbits/MagneticButton";
-import { GradientText } from "@/components/reactbits/GradientText";
+import TrueFocus from "@/components/reactbits/TrueFocus";
 import { LightRays } from "@/components/reactbits/LightRays";
 import { Badge } from "@/components/ui/Badge";
 
@@ -21,12 +21,14 @@ import { Badge } from "@/components/ui/Badge";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden"
+    >
       <LightRays />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
           {/* Left Hero Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -41,7 +43,10 @@ export function HeroSection() {
                 Available for New Projects
               </Badge>
 
-              <Badge variant="outline" className="text-zinc-300 border-white/10">
+              <Badge
+                variant="outline"
+                className="text-zinc-300 border-white/10"
+              >
                 <MapPin className="w-3.5 h-3.5 text-cyan-400" />
                 {PERSONAL_INFO.location}
               </Badge>
@@ -53,10 +58,11 @@ export function HeroSection() {
             </p>
 
             {/* Large Name */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
-              <GradientText colors={["#ffffff", "#c084fc", "#06b6d4", "#ffffff"]}>
-                {PERSONAL_INFO.name}
-              </GradientText>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]  ">
+              <TrueFocus
+                text={PERSONAL_INFO.name}
+                colors={["#ffffff", "#c084fc", "#06b6d4", "#ffffff"]}
+              />
             </h1>
 
             {/* Short Introduction */}
@@ -92,12 +98,22 @@ export function HeroSection() {
 
             {/* Quick Tech Highlights Pills */}
             <div className="pt-6 border-t border-white/10 w-full flex items-center gap-6 text-xs text-zinc-400">
-              <span className="font-semibold text-zinc-300">Core Expertise:</span>
+              <span className="font-semibold text-zinc-300">
+                Core Expertise:
+              </span>
               <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-purple-300">Next.js 15</span>
-                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-cyan-300">TypeScript</span>
-                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-blue-300">Node.js</span>
-                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-purple-300">Tailwind CSS</span>
+                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-purple-300">
+                  Next.js 15
+                </span>
+                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-cyan-300">
+                  TypeScript
+                </span>
+                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-blue-300">
+                  Node.js
+                </span>
+                <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-purple-300">
+                  Tailwind CSS
+                </span>
               </div>
             </div>
           </motion.div>
@@ -110,7 +126,6 @@ export function HeroSection() {
             className="lg:col-span-5 flex justify-center lg:justify-end"
           >
             <div className="relative group w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-              
               {/* Outer Glowing Rings */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 opacity-40 blur-2xl group-hover:opacity-75 transition-opacity duration-500 animate-pulse" />
 
