@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 export type PillNavItem = {
@@ -9,8 +9,7 @@ export type PillNavItem = {
 };
 
 export interface PillNavProps {
-  logo?: React.ReactNode;
-  logoSrc?: string;
+  logo: string;
   logoAlt?: string;
   items: PillNavItem[];
   activeHref?: string;
@@ -26,7 +25,6 @@ export interface PillNavProps {
 
 const PillNav: React.FC<PillNavProps> = ({
   logo,
-  logoSrc,
   logoAlt = 'Logo',
   items,
   activeHref,
@@ -107,7 +105,7 @@ const PillNav: React.FC<PillNavProps> = ({
     window.addEventListener('resize', onResize);
 
     if (document.fonts) {
-      document.fonts.ready.then(layout).catch(() => {});
+      document.fonts.ready.then(layout).catch(() => { });
     }
 
     const menu = mobileMenuRef.current;
@@ -227,6 +225,16 @@ const PillNav: React.FC<PillNavProps> = ({
     onMobileMenuClick?.();
   };
 
+  const isExternalLink = (href: string) =>
+    href.startsWith('http://') ||
+    href.startsWith('https://') ||
+    href.startsWith('//') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('tel:') ||
+    href.startsWith('#');
+
+  const isRouterLink = (href?: string) => href && !isExternalLink(href);
+
   const cssVars = {
     ['--base']: baseColor,
     ['--pill-bg']: pillColor,
@@ -245,29 +253,43 @@ const PillNav: React.FC<PillNavProps> = ({
         aria-label="Primary"
         style={cssVars}
       >
-        {/* Logo */}
-        <Link
-          href="#hero"
-          aria-label="Home"
-          onMouseEnter={handleLogoEnter}
-          ref={el => {
-            logoRef.current = el;
-          }}
-          className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden shrink-0"
-          style={{
-            width: 'var(--nav-h)',
-            height: 'var(--nav-h)',
-            background: 'var(--base, #000)'
-          }}
-        >
-          {logo ? (
-            logo
-          ) : logoSrc ? (
-            <img src={logoSrc} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
-          ) : null}
-        </Link>
+        {isRouterLink(items?.[0]?.href) ? (
+          <Link
+            to={items[0].href}
+            aria-label="Home"
+            onMouseEnter={handleLogoEnter}
+            role="menuitem"
+            ref={el => {
+              logoRef.current = el;
+            }}
+            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+            style={{
+              width: 'var(--nav-h)',
+              height: 'var(--nav-h)',
+              background: 'var(--base, #000)'
+            }}
+          >
+            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+          </Link>
+        ) : (
+          <a
+            href={items?.[0]?.href || '#'}
+            aria-label="Home"
+            onMouseEnter={handleLogoEnter}
+            ref={el => {
+              logoRef.current = el;
+            }}
+            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
+            style={{
+              width: 'var(--nav-h)',
+              height: 'var(--nav-h)',
+              background: 'var(--base, #000)'
+            }}
+          >
+            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+          </a>
+        )}
 
-        {/* Desktop pill items */}
         <div
           ref={navItemsRef}
           className="relative items-center rounded-full hidden md:flex ml-2"
@@ -333,28 +355,41 @@ const PillNav: React.FC<PillNavProps> = ({
               );
 
               const basePillClasses =
-                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[14px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
+                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
 
               return (
                 <li key={item.href} role="none" className="flex h-full">
-                  <Link
-                    role="menuitem"
-                    href={item.href}
-                    className={basePillClasses}
-                    style={pillStyle}
-                    aria-label={item.ariaLabel || item.label}
-                    onMouseEnter={() => handleEnter(i)}
-                    onMouseLeave={() => handleLeave(i)}
-                  >
-                    {PillContent}
-                  </Link>
+                  {isRouterLink(item.href) ? (
+                    <Link
+                      role="menuitem"
+                      to={item.href}
+                      className={basePillClasses}
+                      style={pillStyle}
+                      aria-label={item.ariaLabel || item.label}
+                      onMouseEnter={() => handleEnter(i)}
+                      onMouseLeave={() => handleLeave(i)}
+                    >
+                      {PillContent}
+                    </Link>
+                  ) : (
+                    <a
+                      role="menuitem"
+                      href={item.href}
+                      className={basePillClasses}
+                      style={pillStyle}
+                      aria-label={item.ariaLabel || item.label}
+                      onMouseEnter={() => handleEnter(i)}
+                      onMouseLeave={() => handleLeave(i)}
+                    >
+                      {PillContent}
+                    </a>
+                  )}
                 </li>
               );
             })}
           </ul>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           ref={hamburgerRef}
           onClick={toggleMobileMenu}
@@ -368,20 +403,19 @@ const PillNav: React.FC<PillNavProps> = ({
           }}
         >
           <span
-            className="hamburger-line w-4 h-0.5 rounded origin-center"
+            className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
             style={{ background: 'var(--pill-bg, #fff)' }}
           />
           <span
-            className="hamburger-line w-4 h-0.5 rounded origin-center"
+            className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
             style={{ background: 'var(--pill-bg, #fff)' }}
           />
         </button>
       </nav>
 
-      {/* Mobile dropdown */}
       <div
         ref={mobileMenuRef}
-        className="md:hidden absolute top-[3em] left-4 right-4 rounded-[27px] shadow-[0_8px_32px_rgba(0,0,0,0.24)] z-[998] origin-top"
+        className="md:hidden absolute top-[3em] left-4 right-4 rounded-[27px] shadow-[0_8px_32px_rgba(0,0,0,0.12)] z-[998] origin-top"
         style={{
           ...cssVars,
           background: 'var(--base, #f0f0f0)'
@@ -403,20 +437,33 @@ const PillNav: React.FC<PillNavProps> = ({
             };
 
             const linkClasses =
-              'block py-3 px-4 text-[14px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
+              'block py-3 px-4 text-[16px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
 
             return (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={linkClasses}
-                  style={defaultStyle}
-                  onMouseEnter={hoverIn}
-                  onMouseLeave={hoverOut}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
+                {isRouterLink(item.href) ? (
+                  <Link
+                    to={item.href}
+                    className={linkClasses}
+                    style={defaultStyle}
+                    onMouseEnter={hoverIn}
+                    onMouseLeave={hoverOut}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={linkClasses}
+                    style={defaultStyle}
+                    onMouseEnter={hoverIn}
+                    onMouseLeave={hoverOut}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )}
               </li>
             );
           })}
