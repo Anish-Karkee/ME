@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { CODE_EDITOR_DATA, ABOUT_BULLETS } from "@/constants/portfolioData";
 import { Copy, Check, Terminal, Code, Zap, Layers, Sparkles, UserCheck } from "lucide-react";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
-import { RevealText } from "@/components/reactbits/RevealText";
 import { Badge } from "@/components/ui/Badge";
 
 /**

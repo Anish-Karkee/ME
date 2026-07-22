@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code } from "next/font/google";
+import { Inter, Fira_Code, Geist } from "next/font/google";
 import "./globals.css";
 import { NoiseOverlay } from "@/components/reactbits/NoiseOverlay";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const firaCode = Fira_Code({
   variable: "--font-mono",
@@ -62,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${firaCode.variable} scroll-smooth dark`}>
+    <html lang="en" className={cn("scroll-smooth", "dark", firaCode.variable, "font-sans", geist.variable)}>
       <body className="bg-[#09090b] text-zinc-100 antialiased selection:bg-purple-600 selection:text-white min-h-screen flex flex-col">
         <NoiseOverlay />
         {children}
