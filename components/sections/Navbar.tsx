@@ -4,10 +4,9 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { PERSONAL_INFO, NAV_LINKS } from "@/constants/portfolioData";
-import { Mail, Menu, X, Sun, Moon, FileDown, Sparkles } from "lucide-react";
+import { Mail, Menu, X } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
-import { MagneticButton } from "@/components/reactbits/MagneticButton";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -60,8 +60,9 @@ export function HeroSection() {
             {/* Large Name */}
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]  ">
               <TrueFocus
-                text={PERSONAL_INFO.name}
-                colors={["#ffffff", "#c084fc", "#06b6d4", "#ffffff"]}
+                sentence={PERSONAL_INFO.name}
+                borderColor="#ffffff"
+                glowColor="rgba(255,255,255,0.4)"
               />
             </h1>
 
@@ -145,7 +146,6 @@ export function HeroSection() {
                   {/* Micro Badge inside image */}
                   <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs text-white">
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-cyan-400" />
                       <span className="font-medium">Full Stack Architect</span>
                     </div>
                     <span className="text-zinc-400 text-[10px]">Nepal</span>

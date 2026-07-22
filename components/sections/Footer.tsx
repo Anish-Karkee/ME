@@ -21,9 +21,6 @@ export function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-5 flex flex-col items-start">
             <Link href="#hero" className="flex items-center gap-2 text-xl font-bold tracking-tight mb-4">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-purple-500/30">
-                <Sparkles className="w-4 h-4" />
-              </div>
               <span className="text-white font-extrabold">{PERSONAL_INFO.name}</span>
             </Link>
             <p className="text-sm text-zinc-400 max-w-sm mb-6 leading-relaxed">
