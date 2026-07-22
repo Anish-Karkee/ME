@@ -127,7 +127,7 @@ export function TechStackSection() {
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 ${
                 activeCategory === cat
-                  ? "bg-gradient-to-r from-purple-600 to-cyan-500 text-white shadow-lg shadow-purple-500/25"
+                  ? "bg-white text-zinc-900 shadow-md"
                   : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:bg-white/10"
               }`}
             >

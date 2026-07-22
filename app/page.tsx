@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AuroraBackground } from "@/components/reactbits/AuroraBackground";
+import Galaxy from "@/components/reactbits/Galaxy";
 import { ParticlesBackground } from "@/components/reactbits/ParticlesBackground";
 import { AnimatedGrid } from "@/components/reactbits/AnimatedGrid";
 import { Navbar } from "@/components/sections/Navbar";
@@ -21,9 +21,9 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#09090b] text-zinc-100 overflow-x-hidden">
       
-      {/* Background Animated Layer (React Bits Aurora & Particle canvas) */}
+      {/* Background Animated Layer (React Bits Galaxy & Particle canvas) */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <AuroraBackground />
+        <Galaxy />
         <ParticlesBackground quantity={70} color="#a855f7" />
         <AnimatedGrid />
       </div>

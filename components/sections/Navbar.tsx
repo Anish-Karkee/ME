@@ -42,15 +42,14 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav py-3 shadow-2xl shadow-purple-950/20" : "bg-transparent py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-3 shadow-2xl shadow-purple-950/20" : "bg-transparent py-5"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="#hero" className="group flex items-center gap-2 text-xl font-bold tracking-tight">
-          
-          <span className="text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+
+          <span className="text-white transition-all duration-300">
             {PERSONAL_INFO.name}
           </span>
         </Link>
@@ -64,14 +63,13 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-300 ${
-                  isActive ? "text-white font-semibold" : "text-zinc-400 hover:text-zinc-200"
-                }`}
+                className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-all duration-300 ${isActive ? "text-white font-semibold" : "text-zinc-400 hover:text-zinc-200"
+                  }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="activeNavTab"
-                    className="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-cyan-600/80 rounded-full shadow-sm shadow-purple-500/30"
+                    className="absolute inset-0 bg-white/10 rounded-full border border-white/20"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
@@ -112,7 +110,7 @@ export function Navbar() {
           </div>
 
           <a href="#hero">
-            <button className="px-4 py-2 text-xs font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl hover:opacity-90 shadow-md shadow-purple-500/20 transition-all">
+            <button className="px-4 py-2 text-xs font-medium text-zinc-900 bg-white rounded-xl hover:bg-zinc-100 shadow-md transition-all">
               Resume
             </button>
           </a>

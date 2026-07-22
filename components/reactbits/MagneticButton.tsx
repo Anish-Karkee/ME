@@ -55,7 +55,7 @@ export function MagneticButton({
     >
       <button
         onClick={onClick}
-        className={`relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 active:scale-95 cursor-pointer ${className}`}
+        className={`relative inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-zinc-900 shadow-md transition-all duration-300 hover:bg-zinc-100 active:scale-95 cursor-pointer ${className}`}
         {...props}
       >
         {children}

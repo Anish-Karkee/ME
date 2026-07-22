@@ -50,6 +50,11 @@
   }
 }
 
+/* Section heading accent - plain white (no gradient) */
+.text-gradient-purple-cyan {
+  color: #ffffff;
+}
+
 /* Glassmorphism Classes */
 .glass-panel {
   background: rgba(15, 15, 22, 0.65);

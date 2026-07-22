@@ -83,7 +83,7 @@ export function HeroSection() {
               {/* Contact Me Button */}
               <Link href="#contact">
                 <button className="px-6 py-3.5 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 backdrop-blur-md text-sm font-semibold text-white flex items-center gap-2 shadow-lg hover:border-purple-500/40 transition-all duration-300">
-                  <Send className="w-4 h-4 text-cyan-400" />
+                  <Send className="w-4 h-4 text-zinc-300" />
                   <span>Contact Me</span>
                 </button>
               </Link>
@@ -127,7 +127,7 @@ export function HeroSection() {
           >
             <div className="relative group w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
               {/* Outer Glowing Rings */}
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 opacity-40 blur-2xl group-hover:opacity-75 transition-opacity duration-500 animate-pulse" />
+              <div className="absolute -inset-4 rounded-3xl bg-white/5 opacity-60 blur-2xl group-hover:opacity-90 transition-opacity duration-500" />
 
               {/* Glassmorphic Frame Container */}
               <div className="relative w-full h-full rounded-3xl p-3 border border-white/15 bg-[#12121a]/80 backdrop-blur-2xl shadow-2xl shadow-purple-950/50 flex items-center justify-center overflow-hidden">
