@@ -108,7 +108,7 @@ export function Navbar() {
             </a>
           </div>
 
-          <a href="#hero">
+          <a href='/public/ANISH POKHAREL RESUME.pdf'>
             <button className="px-4 py-2 text-xs font-medium text-zinc-900 bg-white rounded-xl hover:bg-zinc-100 shadow-md transition-all">
               Resume
             </button>

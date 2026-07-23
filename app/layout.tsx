@@ -61,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("scroll-smooth", "dark", firaCode.variable, "font-sans", geist.variable)}>
       <body className="bg-[#09090b] text-zinc-100 antialiased selection:bg-purple-600 selection:text-white min-h-screen flex flex-col">
+      
         <NoiseOverlay />
         {children}
       </body>

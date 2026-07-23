@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { PROJECTS, Project } from "@/constants/portfolioData";
-import { FolderGit2, ExternalLink, Sparkles, Eye } from "lucide-react";
+import { FolderGit2, ExternalLink, Sparkles } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 import { Badge } from "@/components/ui/Badge";
@@ -82,17 +82,7 @@ export function ProjectsSection() {
                       className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#101018] via-transparent to-transparent opacity-80" />
-
-                    {/* Featured Tag */}
-                    {project.featured && (
-                      <div className="absolute top-3 left-3">
-                        <Badge variant="glow" className="text-[10px]">
-                          <Sparkles className="w-3 h-3 text-cyan-300" />
-                          Featured
-                        </Badge>
-                      </div>
-                    )}
+                    <div className="absolute inset-0 bg-linear-to-t from-[#101018] via-transparent to-transparent opacity-80" />
 
                     {/* Overlay Action Buttons */}
                     <div className="absolute inset-0 bg-black/60 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
@@ -118,7 +108,7 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Details Body */}
-                  <div className="p-6 flex flex-col justify-between flex-grow">
+                  <div className="p-6 flex flex-col justify-between grow">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                         {project.title}
