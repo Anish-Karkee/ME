@@ -140,7 +140,7 @@ export function HeroSection() {
                     fill 
                     priority
                     sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out" // just to check the push of image in the github repo.
                   />
 
                   {/* Micro Badge inside image */}
