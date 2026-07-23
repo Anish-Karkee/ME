@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { PERSONAL_INFO, NAV_LINKS } from "@/constants/portfolioData";
-import { Mail, ArrowUp, Sparkles } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
 import { SiX, SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 

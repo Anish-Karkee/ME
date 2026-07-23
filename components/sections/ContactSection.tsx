@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { PERSONAL_INFO } from "@/constants/portfolioData";
-import { Mail, MapPin, Send, CheckCircle2, Sparkles } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
 import { SiX, SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";

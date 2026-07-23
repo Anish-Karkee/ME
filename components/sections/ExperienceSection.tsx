@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { EXPERIENCES } from "@/constants/portfolioData";
-import { Briefcase, Calendar, MapPin, Sparkles } from "lucide-react";
+import { Briefcase, MapPin } from "lucide-react";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 import { Badge } from "@/components/ui/Badge";
 
@@ -43,7 +43,7 @@ export function ExperienceSection() {
               className="relative pl-8 sm:pl-10"
             >
               {/* Timeline Glowing Node Dot */}
-              <div className="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-[#09090b] border-2 border-purple-500 flex items-center justify-center shadow-lg shadow-purple-500/50">
+              <div className="absolute -left-4.25 top-1.5 w-8 h-8 rounded-full bg-[#09090b] border-2 border-purple-500 flex items-center justify-center shadow-lg shadow-purple-500/50">
                 <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
               </div>
 

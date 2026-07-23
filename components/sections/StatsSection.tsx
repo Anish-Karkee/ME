@@ -23,7 +23,7 @@ export function StatsSection() {
     <section ref={ref} className="py-20 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {STATS.map((stat, idx) => (
+          {STATS.map((stat) => (
             <SpotlightCard key={stat.label} className="text-center p-8 flex flex-col items-center justify-center">
               <div className="text-4xl sm:text-5xl font-extrabold mb-2">
                 {inView ? (

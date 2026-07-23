@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { TECH_SKILLS, TechSkill } from "@/constants/portfolioData";
-import { Cpu, Layers, Server, Database, Cloud, Wrench } from "lucide-react";
+import { TECH_SKILLS } from "@/constants/portfolioData";
+import { Cpu } from "lucide-react";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 import { Badge } from "@/components/ui/Badge";
 

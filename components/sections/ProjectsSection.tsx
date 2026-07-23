@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { PROJECTS, Project } from "@/constants/portfolioData";
-import { FolderGit2, ExternalLink, Sparkles } from "lucide-react";
+import { PROJECTS } from "@/constants/portfolioData";
+import { FolderGit2, ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { SpotlightCard } from "@/components/reactbits/SpotlightCard";
 import { Badge } from "@/components/ui/Badge";

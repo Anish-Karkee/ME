@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { PERSONAL_INFO } from "@/constants/portfolioData";
-import { FileDown, Send, MapPin, ChevronDown, Sparkles } from "lucide-react";
+import { FileDown, Send, MapPin, ChevronDown } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { MagneticButton } from "@/components/reactbits/MagneticButton";
 import TrueFocus from "@/components/reactbits/TrueFocus";

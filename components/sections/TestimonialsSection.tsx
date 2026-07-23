@@ -29,7 +29,6 @@ export function TestimonialsSection() {
   if (!emblaApi) return;
 
   emblaApi.on("select", onSelect);
-  onSelect();
 
   return () => {
     emblaApi.off("select", onSelect);
@@ -74,7 +73,7 @@ export function TestimonialsSection() {
 
                       {/* Quote Content */}
                       <p className="text-base sm:text-lg text-zinc-200 italic leading-relaxed mb-8">
-                        "{test.quote}"
+                        {test.quote}
                       </p>
                     </div>
 
