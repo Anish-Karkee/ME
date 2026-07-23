@@ -132,7 +132,7 @@ export function HeroSection() {
 
               {/* Glassmorphic Frame Container */}
               <div className="relative w-full h-full rounded-3xl p-3 border border-white/15 bg-[#12121a]/80 backdrop-blur-2xl shadow-2xl shadow-purple-950/50 flex items-center justify-center overflow-hidden">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-zinc-900">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white">
                   {/* EDITABLE IMAGE LOCATION: /public/images/profile.png */}
                   <Image
                     src={PERSONAL_INFO.profileImage}
@@ -140,7 +140,7 @@ export function HeroSection() {
                     fill 
                     priority
                     sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" 
+                    className="object-contain object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
 
                   {/* Micro Badge inside image */}
