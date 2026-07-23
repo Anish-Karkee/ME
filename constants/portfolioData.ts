@@ -75,7 +75,7 @@ export const PERSONAL_INFO = {
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
   bioShort: "I build modern, scalable and high-performance web applications with beautiful user experiences.",
-  profileImage: "/images/profile.png",
+  profileImage: "/images/Profile.png",
   resumeUrl: "/myresume.pdf",
 };
 
@@ -86,7 +86,6 @@ export const NAV_LINKS = [
   { name: "Services", href: "#services" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
-  { name: "Certificates", href: "#certificates" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -249,92 +248,25 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "exp-1",
-    role: "Senior Full Stack Developer",
-    company: "TechVision Solutions",
-    period: "2024 - Present",
-    location: "Kathmandu, Nepal",
+    role: "JR. Frontend Developer",
+    company: "Youth IT",
+    period: "2025 - Present",
+    location: "Itahari, Nepal",
     description: [
       "Architected scalable Next.js 15 microfrontends reducing initial page load times by 42%.",
       "Mentored junior developers and led code reviews enforcing strict TypeScript standards and modern component patterns.",
       "Engineered backend REST & GraphQL APIs with Express and Prisma targeting sub-50ms latency.",
     ],
-    skills: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Tailwind CSS"],
+    skills: ["Next.js", "TypeScript", "Node.js", "AWS", "Tailwind CSS"],
     isCurrent: true,
-  },
-  {
-    id: "exp-2",
-    role: "Full Stack Engineer",
-    company: "DevPulse Labs",
-    period: "2022 - 2024",
-    location: "Remote",
-    description: [
-      "Built interactive customer dashboards using React, Redux Toolkit, and Chart.js serving 50k+ monthly active users.",
-      "Implemented automated CI/CD pipelines on Vercel and Cloudflare Pages with zero-downtime deployments.",
-      "Integrated secure authentication with Firebase, OAuth2, and JWT tokens across multiple web clients.",
-    ],
-    skills: ["React", "Redux", "Express.js", "MongoDB", "Firebase", "Cloudflare"],
-  },
-  {
-    id: "exp-3",
-    role: "Frontend Developer",
-    company: "InnoWeb Systems",
-    period: "2021 - 2022",
-    location: "Nepal",
-    description: [
-      "Converted high-fidelity Figma designs into responsive HTML/CSS/React components with 100% pixel accuracy.",
-      "Optimized assets and web vitals to achieve 98+ Lighthouse scores across core product pages.",
-    ],
-    skills: ["React", "JavaScript", "Tailwind CSS", "Figma", "REST APIs"],
   },
 ];
 
-export const CERTIFICATES: CertificateItem[] = [
-  {
-    id: "cert-1",
-    title: "AWS Certified Solutions Architect - Associate",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    credentialId: "AWS-ASA-849201",
-    verifyUrl: "https://aws.amazon.com/verification",
-    skills: ["AWS EC2", "S3", "Lambda", "CloudFront", "IAM Security"],
-    badgeColor: "from-amber-500 to-orange-600",
-  },
-  {
-    id: "cert-2",
-    title: "Meta Full Stack Developer Professional",
-    issuer: "Meta (Coursera)",
-    date: "2023",
-    credentialId: "META-FS-593821",
-    verifyUrl: "https://coursera.org/verify",
-    skills: ["React", "Node.js", "Databases", "Version Control", "System Architecture"],
-    badgeColor: "from-blue-500 to-cyan-500",
-  },
-  {
-    id: "cert-3",
-    title: "Next.js Advanced Enterprise Applications",
-    issuer: "Vercel Academy",
-    date: "2023",
-    credentialId: "VERCEL-NEXT-910283",
-    verifyUrl: "https://vercel.com/education",
-    skills: ["App Router", "Server Components", "Edge Runtime", "Middleware"],
-    badgeColor: "from-purple-500 to-pink-500",
-  },
-  {
-    id: "cert-4",
-    title: "MongoDB Certified Developer Associate",
-    issuer: "MongoDB Inc.",
-    date: "2022",
-    credentialId: "MDB-DEV-773912",
-    verifyUrl: "https://mongodb.com/verify",
-    skills: ["NoSQL Schemas", "Aggregations", "Indexing", "Atlas Cloud"],
-    badgeColor: "from-emerald-500 to-teal-600",
-  },
-];
 
 export const STATS: StatItem[] = [
   {
     label: "Projects Completed",
-    value: 35,
+    value: 5,
     suffix: "+",
     description: "Production web applications delivered",
   },
@@ -346,13 +278,13 @@ export const STATS: StatItem[] = [
   },
   {
     label: "GitHub Commits",
-    value: 1450,
+    value: 150,
     suffix: "+",
     description: "Contributions & open-source code",
   },
   {
     label: "Years Learning & Building",
-    value: 4,
+    value: 1,
     suffix: "+",
     description: "Continuous software engineering journey",
   },

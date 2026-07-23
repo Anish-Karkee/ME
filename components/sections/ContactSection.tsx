@@ -56,7 +56,7 @@ export function ContactSection() {
             Get In Touch
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Let&ap0s;s Build Something <span className="text-gradient-purple-cyan">Amazing</span>
+            Let&apos;s Build Something <span className="text-gradient-purple-cyan">Amazing</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl text-base sm:text-lg">
             Have a project in mind, a freelance inquiry, or just want to connect? Send a message below.
