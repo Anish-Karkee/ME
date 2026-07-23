@@ -76,7 +76,7 @@ export const PERSONAL_INFO = {
   twitter: "https://twitter.com",
   bioShort: "I build modern, scalable and high-performance web applications with beautiful user experiences.",
   profileImage: "/images/profile.png",
-  resumeUrl: "/public/ANISH POKHAREL RESUME.pdf",
+  resumeUrl: "/myresume.pdf",
 };
 
 export const NAV_LINKS = [
@@ -97,7 +97,7 @@ export const CODE_EDITOR_DATA = {
   email: "pokharelanish512@gmail.com",
   languages: ["JavaScript", "TypeScript"],
   frameworks: ["React", "Next.js", "Node.js", "Express.js"],
-  database: ["MongoDB", "PostgreSQL", "Firebase", "Prisma"],
+  database: ["MongoDB", "Firebase", "Prisma"],
   cloud: ["AWS", "Cloudflare", "Vercel", "Render"],
   philosophy: "Clean code. Real solutions. Endless curiosity.",
 };

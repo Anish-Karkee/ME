@@ -92,29 +92,29 @@ export function AboutSection() {
 
               <div className="pl-6 py-1">
                 <span className="text-cyan-400">name</span>:{" "}
-                <span className="text-emerald-300">"{CODE_EDITOR_DATA.name}"</span>,
+                <span className="text-emerald-300">{CODE_EDITOR_DATA.name}</span>,
               </div>
 
               <div className="pl-6 py-1">
                 <span className="text-cyan-400">role</span>:{" "}
-                <span className="text-emerald-300">"{CODE_EDITOR_DATA.role}"</span>,
+                <span className="text-emerald-300">{CODE_EDITOR_DATA.role}</span>,
               </div>
 
               <div className="pl-6 py-1">
                 <span className="text-cyan-400">location</span>:{" "}
-                <span className="text-emerald-300">"{CODE_EDITOR_DATA.location}"</span>,
+                <span className="text-emerald-300">{CODE_EDITOR_DATA.location}</span>,
               </div>
 
               <div className="pl-6 py-1">
                 <span className="text-cyan-400">email</span>:{" "}
-                <span className="text-emerald-300">"{CODE_EDITOR_DATA.email}"</span>,
+                <span className="text-emerald-300">{CODE_EDITOR_DATA.email}</span>,
               </div>
 
               <div className="pl-6 py-1">
                 <span className="text-cyan-400">languages</span>: [
                 {CODE_EDITOR_DATA.languages.map((lang, idx) => (
                   <span key={lang}>
-                    <span className="text-emerald-300">"{lang}"</span>
+                    <span className="text-emerald-300">{lang}</span>
                     {idx < CODE_EDITOR_DATA.languages.length - 1 && ", "}
                   </span>
                 ))}
@@ -125,7 +125,7 @@ export function AboutSection() {
                 <span className="text-cyan-400">frameworks</span>: [
                 {CODE_EDITOR_DATA.frameworks.map((fw, idx) => (
                   <span key={fw}>
-                    <span className="text-emerald-300">"{fw}"</span>
+                    <span className="text-emerald-300">{fw}</span>
                     {idx < CODE_EDITOR_DATA.frameworks.length - 1 && ", "}
                   </span>
                 ))}
@@ -136,7 +136,7 @@ export function AboutSection() {
                 <span className="text-cyan-400">database</span>: [
                 {CODE_EDITOR_DATA.database.map((db, idx) => (
                   <span key={db}>
-                    <span className="text-emerald-300">"{db}"</span>
+                    <span className="text-emerald-300">{db}</span>
                     {idx < CODE_EDITOR_DATA.database.length - 1 && ", "}
                   </span>
                 ))}
@@ -147,7 +147,7 @@ export function AboutSection() {
                 <span className="text-cyan-400">cloud</span>: [
                 {CODE_EDITOR_DATA.cloud.map((c, idx) => (
                   <span key={c}>
-                    <span className="text-emerald-300">"{c}"</span>
+                    <span className="text-emerald-300">{c}</span>
                     {idx < CODE_EDITOR_DATA.cloud.length - 1 && ", "}
                   </span>
                 ))}
@@ -156,7 +156,7 @@ export function AboutSection() {
 
               <div className="pl-6 py-1">
                 <span className="text-cyan-400">philosophy</span>:{" "}
-                <span className="text-amber-300">"{CODE_EDITOR_DATA.philosophy}"</span>
+                <span className="text-amber-300">{CODE_EDITOR_DATA.philosophy}</span>
               </div>
 
               <div>

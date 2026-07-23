@@ -68,7 +68,7 @@ export function HeroSection() {
 
             {/* Short Introduction */}
             <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed mb-8">
-              {PERSONAL_INFO.bioShort}&quots;
+              {PERSONAL_INFO.bioShort}
             </p>
 
             {/* CTA Action Buttons */}

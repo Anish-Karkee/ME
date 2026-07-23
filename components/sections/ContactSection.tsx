@@ -56,7 +56,7 @@ export function ContactSection() {
             Get In Touch
           </Badge>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Let's Build Something <span className="text-gradient-purple-cyan">Amazing</span>
+            Let&ap0s;s Build Something <span className="text-gradient-purple-cyan">Amazing</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl text-base sm:text-lg">
             Have a project in mind, a freelance inquiry, or just want to connect? Send a message below.
@@ -132,9 +132,8 @@ export function ContactSection() {
             </SpotlightCard>
 
             {/* Response Time Card */}
-            <SpotlightCard className="p-6 bg-gradient-to-r from-purple-950/40 to-cyan-950/40 border-purple-500/30">
+            <SpotlightCard className="p-6 bg-linear-to-r from-purple-950/40 to-cyan-950/40 border-purple-500/30">
               <div className="flex items-center gap-3">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
                 <div>
                   <h4 className="text-sm font-bold text-white">Fast Response Guaranteed</h4>
                   <p className="text-xs text-zinc-400">Usually responding within 12-24 business hours.</p>
@@ -157,7 +156,7 @@ export function ContactSection() {
                   </div>
                   <h3 className="text-2xl font-extrabold text-white mb-2">Message Received!</h3>
                   <p className="text-sm text-zinc-300 max-w-md mb-8">
-                    Thank you for reaching out, <span className="text-cyan-400 font-semibold">{formData.name}</span>. I'll review your inquiry and get back to you shortly.
+                    Thank you for reaching out. I&apos;ll review your inquiry and get back to you shortly.
                   </p>
                   <button
                     onClick={() => {

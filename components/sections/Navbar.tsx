@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { PERSONAL_INFO, NAV_LINKS } from "@/constants/portfolioData";
+import { NAV_LINKS, PERSONAL_INFO } from "@/constants/portfolioData";
+import { AnimatePresence, motion } from "framer-motion";
 import { Mail, Menu, X } from "lucide-react";
-import { SiGithub } from "react-icons/si";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaLinkedin } from "react-icons/fa6";
+import { SiGithub } from "react-icons/si";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -108,7 +108,7 @@ export function Navbar() {
             </a>
           </div>
 
-          <a href='/public/ANISH POKHAREL RESUME.pdf'>
+          <a href='/myresume.pdf'>
             <button className="px-4 py-2 text-xs font-medium text-zinc-900 bg-white rounded-xl hover:bg-zinc-100 shadow-md transition-all">
               Resume
             </button>
